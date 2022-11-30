@@ -1,0 +1,26 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 30 Nov 2022 17:36:52 at https://www.pcjs.org/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.pcjs.org/ -O1 "C:\My Web Sites\pcjs" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:42:13	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/pcx86/diag/compaq/1990/ (from https://www.pcjs.org/)
+17:46:51	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/pcx86/demo/ibm/exploring/ (from https://www.pcjs.org/blog/)
+17:59:03	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/osi/c1p/basic/other/seawolfe/SEAWOLFE.BAS (from https://www.pcjs.org/machines/osi/c1p/)
+17:59:03	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/osi/c1p/basic/other/tankfortwo/TANKFORTWO.BAS (from https://www.pcjs.org/machines/osi/c1p/)
+17:59:03	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/osi/c1p/basic/other/osiweb/SPACEWAR.BAS (from https://www.pcjs.org/machines/osi/c1p/)
+18:03:15	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/pcx86/app/ibm/basic/1.00/true/ (from https://www.pcjs.org/software/pcx86/app/ibm/basic/1.00/)
+18:05:12	Error: 	"Not Found" (404) at link https://www.pcjs.org/software/pcx86/sw/books/dos_internals/dos_internals/ (from https://www.pcjs.org/documents/)
+18:05:12	Error: 	"Not Found" (404) at link https://www.pcjs.org/documents/documents/manuals/intel/80386/loadall (from https://www.pcjs.org/documents/)
+18:15:42	Error: 	"Not Found" (404) at link https://www.pcjs.org/machines/pcx86/compaq/deskpro386/rom/"photos/Compaq_DeskPro_386-16_System_ROM_V2_Breadboard-640.jpg" (from https://www.pcjs.org/machines/pcx86/compaq/deskpro386/rom/)
+18:35:47	Error: 	"Not Found" (404) at link https://www.pcjs.org/machines/pdp10/ (from https://www.pcjs.org/machines/shared/lib/)
+18:35:47	Error: 	"Not Found" (404) at link https://www.pcjs.org/machines/shared/bin/int36 (from https://www.pcjs.org/machines/shared/lib/)
+18:35:47	Error: 	"Not Found" (404) at link https://www.pcjs.org/machines/pdp10/lib/cpuops.js (from https://www.pcjs.org/machines/shared/lib/)
+18:35:48	Warning: 	Retry after error -4 (No data (connection closed)) at link www.minuszerodegrees.net/5160/misc/5160_memory_layout_of_bios_and_basic.jpg (from https://www.pcjs.org/machines/pcx86/ibm/5160/rom/)
+18:35:49	Warning: 	Retry after error -4 (No data (connection closed)) at link www.minuszerodegrees.net/5160/misc/5160_memory_layout_of_bios_and_basic.jpg (from https://www.pcjs.org/machines/pcx86/ibm/5160/rom/)
+18:35:50	Error: 	"No data (connection closed)" (-4) after 2 retries at link www.minuszerodegrees.net/5160/misc/5160_memory_layout_of_bios_and_basic.jpg (from https://www.pcjs.org/machines/pcx86/ibm/5160/rom/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 58 minutes 58 seconds : 2041 links scanned, 2025 files written (383199461 bytes overall) [211091879 bytes received at 59664 bytes/sec], 201576889 bytes transferred using HTTP compression in 1133 files, ratio 12%, 18.3 requests per connection
+(13 errors, 2 warnings, 0 messages)

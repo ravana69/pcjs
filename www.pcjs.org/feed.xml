@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PCjs Machines</title>
+    <description>PCjs offers a variety of online machine emulators written in JavaScript. Run DOS, Windows, OS/2 and other vintage PC applications in a web browser on your desktop computer, iPhone, or iPad. An assortment of microcomputers, minicomputers, terminals, programmable calculators, and arcade machines are available, along with an archive of historical software and documentation.
+</description>
+    <link>https://www.pcjs.org/</link>
+    <atom:link href="https://www.pcjs.org/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 21 Nov 2022 17:25:13 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Nov 2022 17:25:13 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>PC DOS Reimagined</title>
+        <description>&lt;p&gt;Next year, on August 12, 2021, we’ll be celebrating the 40th anniversary of the IBM PC, a machine that
+put the world of personal computing on a path we’re still on today.&lt;/p&gt;
+
+&lt;p&gt;Granted, that path looks a lot different now, but if you open a Command Prompt on Windows, you can still
+type a few of the commands that were introduced in PC DOS 1.00 (eg, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DIR&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;COPY&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TYPE&lt;/code&gt;), you can
+still run batch (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BAT&lt;/code&gt;) files, and you can even change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATE&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIME&lt;/code&gt; just like you used to almost
+40 years ago.&lt;/p&gt;
+
+&lt;p&gt;With PC DOS 1.00, Microsoft and IBM started down a road that could have forked in any number of directions at
+any point in time, so it was by no means inevitable that we’d always end up where we are now, but it’s also
+true that each new step was constrained in many ways by the previous step.&lt;/p&gt;
+
+&lt;p&gt;Each new version of DOS had to retain compatibility with the previous version, and old features could
+rarely be dropped, so the system inevitably grew.  The need to rapidly add new features and turn around
+new versions, combined with compatibility constraints, meant that major architectural changes to DOS
+were extremely difficult.&lt;/p&gt;
+
+&lt;p&gt;In 1983, PC DOS 2.00 represented perhaps the most dramatic and successful overhaul of PC DOS ever,
+with the introduction of installable device drivers, a hierarchical file system, and a more powerful shell.
+Unfortunately, the shell missed an opportunity to embrace BASIC, choosing to simply mimic a few BASIC-like
+features instead, and the system still couldn’t make the leap to asynchronous I/O and true multitasking.&lt;/p&gt;
+
+&lt;p&gt;And multitasking was clearly something a lot of people wanted – even Microsoft.
+By late 1985, they had had some success running multiple DOS applications in other products, such as
+&lt;a href=&quot;https://www.pcjs.org/software/pcx86/sys/windows/1.01/&quot;&gt;Microsoft Windows 1.01&lt;/a&gt; and
+&lt;a href=&quot;/software/pcx86/sys/dos/microsoft/4.0M/&quot;&gt;Multitasking MS-DOS 4.00&lt;/a&gt;.  But they were unable
+(or perhaps unwilling) to add that feature to PC DOS.&lt;/p&gt;
+
+&lt;p&gt;As a result, a variety of third-party solutions emerged, like VisiCorp’s &lt;strong&gt;Visi On&lt;/strong&gt;, IBM’s &lt;strong&gt;TopView&lt;/strong&gt;,
+SoftLogic’s &lt;strong&gt;DoubleDOS&lt;/strong&gt; and &lt;strong&gt;Software Carousel&lt;/strong&gt;, and Quarterdeck’s &lt;strong&gt;Desqview&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/DoubleDOS-1984.jpg&quot; alt=&quot;DoubleDOS Advertisement, PC Magazine, February 7, 1984&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But all those solutions felt like band-aids.  As Michael J. Miller lamented in the
+&lt;a href=&quot;https://books.google.com/books?id=Zi8EAAAAMBAJ&amp;amp;lpg=PA34&amp;amp;pg=PA34#v=onepage&amp;amp;q&amp;amp;f=false&quot;&gt;August 11, 1986 issue of InfoWorld&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;All these programs may just be interim solutions. Given the increasing
+acceptance of 80286-based machines (the [IBM PC] AT and compatibles),
+it's crazy that we have to resort to environments that get around a
+single-tasking operating system.  What we really need is a multitasking
+operating system that addresses lots of memory.  Hello, Microsoft?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;By that time, Microsoft and IBM were already hard at work on &lt;strong&gt;OS/2&lt;/strong&gt;, but OS/2 was an effort to move
+the world to an entirely new operating system, and it was a transition that ultimately proved too costly, both
+in terms of the required hardware and the sacrifices in DOS compatibility, and not enough people were willing to
+pay the price.  Despite all the power of OS/2 1.x, it could still run only one DOS application at a time, and
+only when it was running full-screen.&lt;/p&gt;
+
+&lt;h3 id=&quot;introducing-basic-dos&quot;&gt;Introducing BASIC-DOS&lt;/h3&gt;
+
+&lt;p&gt;So over 40 years ago, if Microsoft and IBM had partnered just a little bit sooner, if they’d been able to
+predict how popular the platform would become, if they could have harnessed more of its power, and if
+Microsoft had been able to build more synergy between their flagship BASIC product and the underlying
+“&lt;a href=&quot;https://en.wikipedia.org/wiki/86-DOS&quot;&gt;Quick and Dirty&lt;/a&gt;” operating system, how dramatic could the impact
+have been?&lt;/p&gt;
+
+&lt;p&gt;It’s impossible to know with any certainty.  However, what’s &lt;em&gt;not&lt;/em&gt; impossible is creating that product
+today, and to see for ourselves what the IBM PC was really capable of from “Day One.”&lt;/p&gt;
+
+&lt;p&gt;And that was the inspiration for BASIC-DOS, a product (well, just a proof-of-concept at this point) that
+combines the power of BASIC with a multitasking DOS.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://basicdos.com/preview/&quot;&gt;&lt;img src=&quot;https://basicdos.com/assets/images/BASIC-DOS1.png&quot; alt=&quot;BASIC-DOS Demo #1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://basicdos.com/preview/part4/&quot;&gt;&lt;img src=&quot;https://basicdos.com/assets/images/BASIC-DOS2.png&quot; alt=&quot;BASIC-DOS Demo #2&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;https://basicdos.com/blog/&quot;&gt;BASIC-DOS Blog&lt;/a&gt;, check out the &lt;a href=&quot;https://basicdos.com/preview/&quot;&gt;BASIC-DOS Preview&lt;/a&gt;,
+and see what you think.&lt;/p&gt;
+
+&lt;p&gt;As a product, yes, it’s completely out-dated.  But as retro-programming projects go, it’s been a good one for 2020.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://basicdos.com&quot;&gt;&lt;img src=&quot;https://basicdos.com/assets/images/BASIC-DOS-Cover.gif&quot; alt=&quot;BASIC-DOS 1.00&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Dec 2020 09:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2020/12/22/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2020/12/22/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Solitaire Week at LCM</title>
+        <description>&lt;p&gt;It’s &lt;a href=&quot;https://livingcomputers.org/Exhibits-Events/Events/MS-Solitaire-s-30th-Anniversary.aspx&quot;&gt;Solitaire Week&lt;/a&gt; at
+&lt;a href=&quot;https://livingcomputers.org&quot;&gt;Living Computers Museum+Labs&lt;/a&gt;, and they’ve produced a lot of fun content celebrating the 30th
+anniversary of Solitaire for Microsoft Windows.&lt;/p&gt;
+
+&lt;p&gt;They’ve got everything from blog posts, like “&lt;a href=&quot;https://livingcomputers.org/Blog/MS@45-Did-You-Know-Solitaire-was-Microsoft-s-cherr.aspx&quot;&gt;Did You Know: Solitaire was Microsoft’s Cherry on Top&lt;/a&gt;,”
+to little-known facts on &lt;a href=&quot;https://twitter.com/LivingComputers&quot;&gt;Twitter&lt;/a&gt;:
+“&lt;a href=&quot;https://twitter.com/LivingComputers/status/1262526134836748288&quot;&gt;Did you know that the original card back art in @Microsoft Solitaire was designed by two women?&lt;/a&gt;”&lt;/p&gt;
+
+&lt;p&gt;And they have short YouTube videos, like “&lt;a href=&quot;https://www.youtube.com/watch?v=AXdtMYrTbYs&quot;&gt;Solitaire Speedrunning Tips+Tricks&lt;/a&gt;,”
+which offers several handy tips, including my favorite: play with your lucky cards!&lt;/p&gt;
+
+&lt;p&gt;To help everyone celebrate, I’ve created a special IBM PC AT machine below that’s already running Solitaire on top of Windows 3.0.
+If it seems a little slow, that’s because you’re spoiled by modern PCs that are &lt;em&gt;literally&lt;/em&gt; hundreds of times faster than this 8Mhz
+IBM PC AT from the 1980’s.  You can crank up the speed if you like (click the “8.00Mhz” button), but don’t
+expect that to make you any luckier.&lt;/p&gt;
+
+&lt;div id=&quot;ibm5170-win300&quot; class=&quot;machine-placeholder&quot;&gt;
+  &lt;p&gt;[PCjs Machine &quot;ibm5170-win300&quot;]&lt;/p&gt;
+  &lt;p class=&quot;machine-warning&quot;&gt;Waiting for machine &quot;ibm5170-win300&quot; to load....&lt;/p&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 21 May 2020 09:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2020/05/21/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2020/05/21/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Recent Software Donations</title>
+        <description>&lt;p&gt;Thanks to the generosity of PCjs user Phil Mayes, who recently donated &lt;em&gt;boxes&lt;/em&gt; of old PC diskettes for the price of shipping,
+the &lt;a href=&quot;/software/pcjs/&quot;&gt;PCjs Software Archive&lt;/a&gt; continues to slowly grow.&lt;/p&gt;
+
+&lt;p&gt;Among the boxes of treasures:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/software/pcx86/lang/microsoft/c/1.03/&quot;&gt;Microsoft C Compiler 1.03 (Beta)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/software/pcx86/lang/microsoft/c/1.04/&quot;&gt;Microsoft C Compiler 1.04&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/software/pcx86/app/microsoft/word/1.10/&quot;&gt;Microsoft Word 1.10 (for DOS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/software/pcx86/util/norton/2.00/&quot;&gt;The Norton Utilities 2.00&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a &lt;em&gt;lot&lt;/em&gt; more disks to examine and duplicate, and the heads of my poor 5.25-inch disk drive seem to need increasingly
+frequent cleaning these days.  But progress is being made.&lt;/p&gt;
+
+&lt;p&gt;Thanks Phil!&lt;/p&gt;
+
+&lt;p&gt;And if &lt;em&gt;you&lt;/em&gt; happen to have any boxes of old PC diskettes that you’d be willing to donate, feel free to &lt;a href=&quot;mailto:Jeff@pcjs.org&quot;&gt;contact me&lt;/a&gt;
+with pictures, and if it appears there are any unique or historically interesting disks in your collection, I’ll be happy to pay for
+shipping &lt;em&gt;and&lt;/em&gt; publicly acknowledge your generous contribution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/software/pcx86/lang/microsoft/c/1.03/&quot;&gt;&lt;img src=&quot;https://diskettes.pcjs.org/pcx86/lang/microsoft/c/1.03/MSC103-BETA-DISK1.jpg&quot; alt=&quot;MS C 1.03 Beta (Disk 1)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/software/pcx86/lang/microsoft/c/1.04/&quot;&gt;&lt;img src=&quot;https://diskettes.pcjs.org/pcx86/lang/microsoft/c/1.04/MSC104-DISK1.jpg&quot; alt=&quot;MS C 1.04 (Disk 1)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 May 2020 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2020/05/16/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2020/05/16/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to PCjs 2.0</title>
+        <description>&lt;p&gt;I recently decided 2020 would be a good year to refresh the PCjs website.&lt;/p&gt;
+
+&lt;p&gt;My main motivations were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make the website easier to navigate&lt;/li&gt;
+  &lt;li&gt;Do a better job of highlighting content&lt;/li&gt;
+  &lt;li&gt;Simplify the underlying the GitHub repository&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The original PCjs repository had grown a bit unwieldy, to the point where I could no longer simply push my changes to the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch and let GitHub Pages automatically rebuild the site.  Instead, I had to create a special (private) repo that
+was nothing more than a copy of the main repo, periodically pull all the changes from the main repo, perform a local Jekyll
+rebuild of the entire site, and then commit the rebuilt site back to the special repo.  Kind of a nuisance.&lt;/p&gt;
+
+&lt;p&gt;In addition, the structure of the original repository had evolved over many years, resulting in a lot of redundant folder
+structures.  For example, PCx86 machine emulation was comprised of at least &lt;em&gt;four&lt;/em&gt; separate folder hierarchies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Machine pages&lt;/li&gt;
+  &lt;li&gt;Machine config files&lt;/li&gt;
+  &lt;li&gt;Machine documentation&lt;/li&gt;
+  &lt;li&gt;Machine source code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The new repository combines most of those under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/machines/pcx86&lt;/code&gt;.  Only machine config files are still in a separate
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/configs&lt;/code&gt; folder, and that’s only to accommodate the Jekyll build system that GitHub Pages uses.  My Jekyll page templates
+need access to PCjs machine configuration files, and Jekyll data files must be placed in a specially designated folder,
+so I chose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/configs&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And speaking of Jekyll, I also decided to ditch my old Node-based web server.  It still offered some advantages for local
+development and testing, because it could dynamically construct web pages on the fly much faster than Jekyll, and it supported
+debugging PCjs emulator source files without having to first “compile” them with the Closure Compiler.  But ultimately I
+decided it was better to just have one build system to maintain.&lt;/p&gt;
+
+&lt;p&gt;I also considered rolling the new repo structure into the original PCjs repo, and I may still do that, but for now, I’ve
+decided to keep things simple and use a &lt;a href=&quot;https://github.com/jeffpar/pcjs&quot;&gt;new repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Apr 2020 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2020/04/03/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2020/04/03/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Space Invaders Revisited</title>
+        <description>&lt;p&gt;When I first started working on PCjs, JavaScript features like
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes&quot;&gt;Classes&lt;/a&gt; and
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame&quot;&gt;requestAnimationFrame()&lt;/a&gt; weren’t widely
+available.  Over the next 8 or so years, things changed a lot, I learned a lot, and PCjs slowly grew to support more machines.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, that growth resulted in a lot of duplicated code, along with some out-dated and kludgy code.  While
+I did try to factor out common chunks of logic into a set of &lt;a href=&quot;https://github.com/jeffpar/pcjs/tree/gh-pages/machines/shared/lib/&quot;&gt;PCjs shared modules&lt;/a&gt; modules,
+those efforts were limited, partly to save time, but also to minimize the risk of breaking old machines while creating new ones.
+Getting a new emulator up and running is time-consuming enough without constantly testing and fixing all the others.&lt;/p&gt;
+
+&lt;p&gt;I decided to make a break with that code base a couple years ago, when I wrote a web-based emulation of the
+&lt;a href=&quot;/machines/ti/ti57/&quot;&gt;TI-57 Calculator&lt;/a&gt;.  I created a new set of &lt;a href=&quot;https://github.com/jeffpar/pcjs/tree/gh-pages/machines/modules/&quot;&gt;Machine library modules&lt;/a&gt; hierarchy,
+including a new time management class to “clock” all the internal devices, which could be driven either by &lt;em&gt;setTimeout()&lt;/em&gt;
+or &lt;em&gt;requestAnimationFrame()&lt;/em&gt;, and I used simple JSON and HTML markup to define the machine configuration and layout,
+instead of the older XML-based PCjs configuration scheme, which had become increasingly clunky and difficult to maintain.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-new-8080-emulator-and-debugger&quot;&gt;A New 8080 Emulator and Debugger&lt;/h3&gt;
+
+&lt;p&gt;A few months ago, I decided to continue the evolution of those new classes, starting with a fairly simple machine
+that I had previously emulated: the 8080-based arcade machine Space Invaders.&lt;/p&gt;
+
+&lt;p&gt;First, since I always like to start with an operational debugger, I took the most useful features common to
+all the PCjs debuggers and packed them into a new &lt;a href=&quot;/machines/modules/debugger.js&quot;&gt;Debugger&lt;/a&gt; base class, which provides
+most of the commands that the new &lt;a href=&quot;/machines/pcx80/modules/dbgx80.js&quot;&gt;8080 Debugger&lt;/a&gt; needs.&lt;/p&gt;
+
+&lt;p&gt;Then I separated management of the browser display elements into a new &lt;a href=&quot;/machines/modules/monitor.js&quot;&gt;Monitor&lt;/a&gt;
+base class, so that the Space Invaders &lt;a href=&quot;/machines/arcade/invaders/modules/video.js&quot;&gt;Video&lt;/a&gt; device could focus on the graphics
+hardware.  And the handful of machine I/O ports are implemented by a &lt;a href=&quot;/machines/arcade/invaders/modules/ports.js&quot;&gt;Ports&lt;/a&gt;
+device that extends a standard &lt;a href=&quot;/machines/modules/ports.js&quot;&gt;Ports&lt;/a&gt; class, which plugs into the new &lt;a href=&quot;/machines/modules/bus.js&quot;&gt;Bus&lt;/a&gt;
+class, which implements as many buses as a machine needs (eg, memory and I/O).&lt;/p&gt;
+
+&lt;p&gt;And of course, beating at the heart of every machine is the CPU, and for Space Invaders, the
+&lt;a href=&quot;/machines/pcx80/modules/cpux80.js&quot;&gt;8080 CPU&lt;/a&gt; was a straight-forward port of the &lt;a href=&quot;/machines/pcx80/lib/cpuops.js&quot;&gt;original&lt;/a&gt;
+PCjs emulation.&lt;/p&gt;
+
+&lt;p&gt;One significant change in this new architecture is that every internal device is an instance of the &lt;a href=&quot;/machines/modules/device.js&quot;&gt;Device&lt;/a&gt;
+class, which in turn builds upon a simple inheritance chain that includes all the functionality that any device might need.
+If a device wants to call &lt;em&gt;printf()&lt;/em&gt;, for example, it can do so by simply invoking &lt;em&gt;this.printf()&lt;/em&gt;, rather than having
+to first “include” (ie, &lt;em&gt;import&lt;/em&gt; or &lt;em&gt;require&lt;/em&gt;) the class that contains &lt;em&gt;printf()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve also done away with specialized PCjs printing functions like &lt;em&gt;printMessage()&lt;/em&gt; and &lt;em&gt;printMessageIO()&lt;/em&gt;.  &lt;em&gt;printf()&lt;/em&gt;
+is the preferred method, and if a device wants to assign certain print operations to certain message groups (ie, sets of
+messages that can be turned on or off through the debugger), it simply includes the MESSAGE id as the first parameter to
+&lt;em&gt;printf()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Debugger input and output controls have been unified into a single textarea “window”, there’s improved breakpoint
+management for setting read and write breakpoints on any valid memory or I/O address, an execution history buffer can
+be enabled and dumped with the built-in dump (“d”) command, and all the debugger’s commands can be accessed from any
+browser debug console window via a global &lt;em&gt;window.command()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;h3 id=&quot;time-to-kill&quot;&gt;Time to Kill&lt;/h3&gt;
+
+&lt;p&gt;Now, as much as I love Space Invaders – it was the first arcade game I became addicted to back in 1979 – the goal here
+wasn’t really to make yet another clone of Space Invaders.  I just wanted to make it easier to build more web-based emulators,
+fix some things that have long bugged me, make the animation smoother, improve debugging and machine configuration, and so on.&lt;/p&gt;
+
+&lt;p&gt;The new Space Invaders emulation should be running below.  Keys are mapped by the &lt;a href=&quot;/machines/modules/input.js&quot;&gt;Input&lt;/a&gt; device
+to the machine’s buttons using “map” data provided in the machine &lt;a href=&quot;/machines/arcade/invaders/invaders.json&quot;&gt;configuration file&lt;/a&gt;.
+Here’s a summary:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;1&lt;/strong&gt;: One Player&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;2&lt;/strong&gt;: Two Players&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;3&lt;/strong&gt;: Insert Coin&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; or &lt;strong&gt;Left&lt;/strong&gt;: Move Left&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;D&lt;/strong&gt; or &lt;strong&gt;Right&lt;/strong&gt;: Move Right&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;L&lt;/strong&gt; or &lt;strong&gt;Space&lt;/strong&gt;: Fire&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For touch-screen devices like the iPhone and iPad, I’ve implemented a quick-and-dirty mapping, where regions across
+the top of the monitor correspond to first three buttons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Top Left: One Player&lt;/li&gt;
+  &lt;li&gt;Top Right: Two Players&lt;/li&gt;
+  &lt;li&gt;Top Center: Insert Coin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and regions across the bottom of the monitor correspond to the last three buttons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Left Side: Move Left and Move Right&lt;/li&gt;
+  &lt;li&gt;Right Side: Fire&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is purely experimental and may only work in portrait mode; landscape and full-screen modes will probably need
+more work to make them usable.&lt;/p&gt;
+
+&lt;p&gt;An emulator is never really done, because an emulation can always be made just a little bit better.  But I feel like
+this is a nice fresh start.&lt;/p&gt;
+
+&lt;div id=&quot;invaders&quot; class=&quot;pcjs-chassis&quot;&gt;
+  &lt;div class=&quot;pcjs-controls-right&quot;&gt;
+    &lt;div class=&quot;pcjs-block-control&quot;&gt;&lt;button class=&quot;pcjs-block-button&quot; id=&quot;powerInvaders&quot;&gt;Power&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;pcjs-block-control&quot;&gt;&lt;button class=&quot;pcjs-block-button&quot; id=&quot;zoomInvaders&quot;&gt;Full Screen&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;monitorInvaders&quot; class=&quot;pcjs-monitor&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;pcjs-controls-left&quot;&gt;
+    &lt;div class=&quot;pcjs-dip&quot;&gt;
+      &lt;label&gt;DIP Switches&lt;br /&gt;
+        &lt;div id=&quot;sw1&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;1&lt;/div&gt;
+        &lt;div id=&quot;sw2&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;2&lt;/div&gt;
+        &lt;div id=&quot;sw3&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;3&lt;/div&gt;
+        &lt;div id=&quot;sw4&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;4&lt;/div&gt;
+        &lt;div id=&quot;sw5&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;5&lt;/div&gt;
+        &lt;div id=&quot;sw6&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;6&lt;/div&gt;
+        &lt;div id=&quot;sw7&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;7&lt;/div&gt;
+        &lt;div id=&quot;sw8&quot; class=&quot;pcjs-dip-switch pcjs-dip-switch-off&quot;&gt;8&lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pcjs-diagnostics&quot;&gt;
+  &lt;div&gt;
+    &lt;label&gt;Diagnostics&lt;br /&gt;
+      &lt;textarea id=&quot;printInvaders&quot; class=&quot;pcjs-console&quot; cols=&quot;128&quot; rows=&quot;20&quot;&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button id=&quot;resetInvaders&quot;&gt;Reset&lt;/button&gt;
+  &lt;button id=&quot;runInvaders&quot;&gt;Run&lt;/button&gt;
+  &lt;button id=&quot;stepInvaders&quot;&gt;Step&lt;/button&gt;
+  &lt;button id=&quot;clearInvaders&quot;&gt;Clear&lt;/button&gt;
+  &lt;span id=&quot;speedInvaders&quot; style=&quot;font-size:small&quot;&gt;Stopped&lt;/span&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 28 Sep 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/09/28/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/09/28/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>A Quick Post</title>
+        <description>&lt;p&gt;There have been a number of small additions to the website over the last month:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A set of &lt;a href=&quot;/machines/pcx86/compaq/deskpro286/#documents&quot;&gt;COMPAQ Technical Reference Guides&lt;/a&gt; (thanks to Ray Knights of Las Vegas, NV)&lt;/li&gt;
+  &lt;li&gt;A few more 1989 issues of &lt;a href=&quot;/documents/magazines/pctj/&quot;&gt;PC Tech Journal&lt;/a&gt; magazine, which now makes the collection complete&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/software/pcx86/lang/microsoft/basic/quickbasic/1.00/&quot;&gt;QuickBASIC 1.0&lt;/a&gt; and &lt;a href=&quot;/software/pcx86/lang/microsoft/basic/quickbasic/2.00/&quot;&gt;QuickBASIC 2.0&lt;/a&gt; original diskettes; version 1.0 had been particularly hard to find&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;as well as a few PCx86 tweaks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed full-screen support for Chrome, Safari, and Edge&lt;/li&gt;
+  &lt;li&gt;Added Copy/Paste support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As of v1.75.5, it should now be possible to right-click on a PCx86 screen and choose Copy/Paste commands, or use
+your browser’s Copy/Paste shortcut keys, or both.  The browser’s right-click context menu won’t always be available
+if the machine inside is expecting mouse events, but hopefully your browser’s keyboard shortcuts will still work.&lt;/p&gt;
+
+&lt;p&gt;Pasting works by injecting keystrokes into the machine, much like you could already do with the &lt;em&gt;autoType&lt;/em&gt; URL parameter
+(check out this &lt;a href=&quot;/blog/2018/03/22/&quot;&gt;blog post&lt;/a&gt; for a demo of &lt;em&gt;autoType&lt;/em&gt;).  And like &lt;em&gt;autoType&lt;/em&gt;, special keystrokes can be
+pasted as well.  For example, Ctrl-F4 can pasted with “$ctrl$f4”.  But unlike &lt;em&gt;autoType&lt;/em&gt;, any special “$” sequences will
+be ignored and pasted as-is &lt;em&gt;unless&lt;/em&gt; you also end the entire block of text with “$”; the final “$” will not be pasted.
+And if you want to paste a block of text as-is that also ends with “$”, end it with “$$” instead.&lt;/p&gt;
+
+&lt;p&gt;Consider this a “beta” release of Copy/Paste support, because the feature is new, hasn’t been tested a lot, and could
+probably benefit from some user feedback.  If there are no issues, I’ll look into adding the support to other machines
+(e.g., PCx80, PDPjs, TI-57, etc), too.&lt;/p&gt;
+
+&lt;p&gt;I’ve also been working on weaning PCjs off of Amazon Web Services.  I was using S3 cloud storage for many of the
+documents I’ve scanned over the years, but since I was also paying for OneDrive, it seemed silly to pay extra for AWS,
+which charges me for both bandwidth and space.  The embedded OneDrive links may not be as fast or convenient as the old
+AWS links, but it lowers my costs, and you still don’t have to pay anything, so it’s a win-win.  Or a win-push.  Or
+something.&lt;/p&gt;
+
+&lt;p&gt;I haven’t turned off AWS yet, primarily because there’s a number of “archive.pcjs.org” links out in the wild that are
+still served by AWS, but I plan to address that in the near future.&lt;/p&gt;
+
+&lt;p&gt;I’d also like to spend some time playing with the old versions of QuickBASIC.
+The diskettes I picked up didn’t come with any manuals, but I do have a copy of “Microsoft QuickBASIC” by Douglas Hergert
+from Microsoft Press (1987).  I’m thinking about mailing in a request for the “Companion Disk”, too.  I’ll let you know if
+Microsoft Press comes through.&lt;/p&gt;
+
+&lt;h3 id=&quot;microsoft-quickbasic&quot;&gt;Microsoft QuickBASIC&lt;/h3&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;microsoft-quickbasic-1987-pdf&quot; style=&quot;width:200px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gvA_O6gyOmFPqAMhDw?e=GaqGs8&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/documents/books/programming/covers/Microsoft_QuickBASIC-1987.jpg&quot; width=&quot;200&quot; height=&quot;260&quot; alt=&quot;Microsoft QuickBASIC (1987)&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;Microsoft QuickBASIC &lt;br /&gt;(1987)&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/documents/books/programming/covers/Microsoft_QuickBASIC-1987-Offer.jpg&quot; alt=&quot;Microsoft QuickBASIC Companion Disk Offer&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Jul 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/07/28/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/07/28/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>A COMPAQ DeskPro 386 Mystery Solved</title>
+        <description>&lt;p&gt;On September 9, 1986, at 11am at the Palladium nightclub in New York, COMPAQ unveiled the DeskPro 386, described by
+COMPAQ President Rod Canion as “the most advanced high-performance personal computer in the world.”  With this product,
+COMPAQ effectively declared that they – along with Intel and Microsoft – were now “setting the pace for the rest of
+the industry”, by creating “the first of a new generation of industry-standard desktop workstations.” &lt;a href=&quot;#references&quot;&gt;*&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://books.google.com/books?id=aS8EAAAAMBAJ&amp;amp;pg=PA1&amp;amp;lpg=PA1&amp;amp;dq=%22infoworld%22+compaq+deskpro+386&amp;amp;source=bl&amp;amp;ots=bQd3dDYHNB&amp;amp;sig=ACfU3U1TGdxkDCJ_sauZx1ZRYjLTMq1KTA&amp;amp;hl=en&amp;amp;sa=X&amp;amp;ved=2ahUKEwj6w8jUgvHiAhUqCTQIHSQYAhoQ6AEwBXoECAcQAQ#v=onepage&amp;amp;q&amp;amp;f=false&quot;&gt;&lt;img src=&quot;/blog/images/compaq/InfoWorld-1986-09-15.png&quot; alt=&quot;InfoWorld - September 9, 1986&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a major announcement.  Speakers included Ben Rosen (COMPAQ Chairman), Rod Canion (COMPAQ President),
+Bill Gates (Microsoft Chairman and CEO), and Gordon Moore (Intel Chairman), followed by software industry leaders
+from Ashton-Tate and Lotus.&lt;/p&gt;
+
+&lt;p&gt;However, missing from the media spotlight were any of the engineers who worked behind the scenes to make the DeskPro
+386 a reality.  Even Rod Canion’s book “Open: How Compaq Ended IBM’s PC Domination and Helped Invent Modern Computing”
+doesn’t mention many engineers.  He does say that “Every part of the company had contributed to [the DeskPro 386’s]
+success, and many dedicated people had worked long hours in the summer months leading up to it”, but his focus was
+almost exclusively on upper management.&lt;/p&gt;
+
+&lt;p&gt;Presumably many of those DeskPro 386 engineers also appear in this company photo, which is undated, but assuming the
+machines pictured are COMPAQ SystemPros, it’s probably from 1989 – roughly 3 years after the DeskPro 386 was introduced.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/COMPAQ_Employees.png&quot; alt=&quot;COMPAQ Employees&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As for the DeskPro 386, it appeared that some of the engineers had their initials “inscribed” inside the machine –
+specifically, inside the &lt;a href=&quot;/machines/pcx86/compaq/deskpro386/rom/#authors-of-the-compaq-deskpro-386-rom&quot;&gt;DeskPro 386 ROM&lt;/a&gt; –
+but it was unclear who &lt;strong&gt;CAB&lt;/strong&gt;, &lt;strong&gt;GLB&lt;/strong&gt;, &lt;strong&gt;RWS&lt;/strong&gt;, &lt;strong&gt;DJC&lt;/strong&gt;, and &lt;strong&gt;NPB&lt;/strong&gt; were.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-compaq-mini-reunion&quot;&gt;A COMPAQ Mini-Reunion&lt;/h3&gt;
+
+&lt;p&gt;Last year, HPE firmware engineer Thomas Palmer (who still works at the location of COMPAQ’s old headquarters in Houston,
+Texas) took an interest in this part of COMPAQ’s history, tracked down as many former COMPAQ engineers still in the area as
+he could find, and made arrangements for a small informal reunion.&lt;/p&gt;
+
+&lt;p&gt;The reunion happened one year ago, on June 19, 2018.  Thanks to Thomas, I was able to attend the reunion, and the
+engineers who worked on the DeskPro 386 were gracious enough to sign my copy of the COMPAQ DeskPro 386 Technical Reference
+Guide – and in the process, solved the mystery of the DeskPro 386 ROM’s principal authors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monty McGraw&lt;/li&gt;
+  &lt;li&gt;Mike Perez&lt;/li&gt;
+  &lt;li&gt;Carrie Boone (&lt;strong&gt;CAB&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Norm Brown (&lt;strong&gt;NPB&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Randy Spurlock (&lt;strong&gt;RWS&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Darren Cepulis (&lt;strong&gt;DJC&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/machines/pcx86/compaq/deskpro386/&quot;&gt;&lt;img src=&quot;/machines/pcx86/compaq/deskpro386/photos/COMPAQ_DeskPro_386-25_Technical_Reference_Guide-Vol1-1988-08-Signatures.png&quot; alt=&quot;COMPAQ DeskPro 386-25 Technical Reference Guide - Volume 1 - 1988-08 - Signatures&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Of the 5 people whose initials are embedded in the original ROM, only &lt;strong&gt;GLB&lt;/strong&gt; was unable to attend.&lt;/p&gt;
+
+&lt;p&gt;When Mike Perez noticed my copy of the TRG, he told me a bit more about it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MIKE: What is that?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;JEFF: This is the Technical Reference Guide for the DeskPro 386.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MIKE: You know who wrote that?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;JEFF: No.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MIKE: Me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;JEFF: Really? I’m hoping to get it autographed actually.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MIKE: Because we had a terrible writer that was taking way too long…. So Kevin Elton said, no, we got to have this thing
+done by announcement.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;So I would write one chapter one night, review that chapter the next day, while I wrote the next one. And then it was all
+done and they forgot to order the cover–the binder. So the binder was the last item that came in. And Kent Price–rest in peace,
+he just passed away about maybe a month ago–he was in charge of the documentation and we would go there and rake him through
+the coals.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The most controversial part of that book was the errata, because we had to work with Intel. There was some errata that we
+fixed in code or in hardware… so I put it in there that it was fixed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;JEFF: Usually Intel was very tight-lipped about the errata, so I’m surprised they let you publish it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MIKE: That’s what was controversial about it. So the only errata we put in there was the couple of errata that were
+not fixed. There was a floating point issue, if I remember correctly….  Backtracking a little bit: we had bought, we had
+already bought the first lot of 386s coming from Intel. We bought the whole thing, sight unseen. And so our job was to make
+it work, despite all the errata.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;And so we we did a bunch of fixes, some in hardware, some in the ROM, to get around the errata. So the only errata that
+were left was like the floating point one…. And so, there was a bunch of errata that we didn’t publish… good luck to the
+people who were trying to do their own. You gotta find them on your own and fix them on your own. The other little tricky
+thing is we asked the hardware… the key hardware designer to leave a couple parts out of the schematic just in case somebody
+took the schematic and copied it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CARRIE: COMPAQ was so associated with the 386 that that’s why Intel started their “Intel Inside” campaign, because people
+thought that COMPAQ had created the microprocessor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Some of the engineers are now retired, like Randy (who also worked at NVIDIA), while others are still working in the area.
+Monty still works at HPE and Norm still works at HP Inc.  And others have moved on to other careers, like Carrie, who is now
+a patent lawyer at KDB.&lt;/p&gt;
+
+&lt;h3 id=&quot;memorabilia&quot;&gt;Memorabilia&lt;/h3&gt;
+
+&lt;p&gt;Several of them also brought early COMPAQ memorabilia to share, like this “Magnum” t-shirt.  I learned that Magnum was the
+code name for the DeskPro 386 (one of the little details Canion neglected to mention in his book).  No one would probably put
+imagery like that on a company t-shirt today, but those were simpler times.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/COMPAQ_Magnum_Tshirt.jpg&quot; alt=&quot;COMPAQ Magnum T-shirt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One of them donated this jacket to me, and the “COMPAQ/Microsoft” baseball cap – a gift from Thomas Palmer – completed
+the fashionable ensemble.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/COMPAQ_Jacket_and_Cap.jpg&quot; alt=&quot;COMPAQ Jacket and Cap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another engineer brought a collection of COMPAQ newsletters, which I hope get scanned and preserved online someday.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/COMPAQ_Newsletters.jpg&quot; alt=&quot;COMPAQ Newsletters&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;thanks-for-the-memories&quot;&gt;Thanks for the Memories&lt;/h3&gt;
+
+&lt;p&gt;I got the sense that everyone really enjoyed the opportunity to reconnect and reminisce.  Thanks again to Thomas for taking
+the initiative to organize it, and for giving me the chance to participate and show appreciation for all their hard work.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/Reunion1.png&quot; alt=&quot;COMPAQ Reunion 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/Reunion2.png&quot; alt=&quot;COMPAQ Reunion 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/Reunion3.png&quot; alt=&quot;COMPAQ Reunion 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/Reunion4.png&quot; alt=&quot;COMPAQ Reunion 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/compaq/Reunion5.png&quot; alt=&quot;COMPAQ Reunion 5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;“Open: How Compaq Ended IBM’s PC Domination and Helped Invent Modern Computing”, by Rod Canion (p. 98). BenBella Books, Inc.. Kindle Edition.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 18 Jun 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/06/18/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/06/18/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Adventures in Copy Protection</title>
+        <description>&lt;p&gt;Thanks to a contribution from a PCjs user, I was able to examine a KryoFlux dump of an original
+&lt;a href=&quot;/software/pcx86/game/microsoft/adventure/&quot;&gt;Microsoft Adventure&lt;/a&gt; diskette:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gamedisks.pcjs.org/pcx86/game/microsoft/adventure/Adventure_Diskette-HxC.png&quot; alt=&quot;Microsoft Adventure Diskette&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see that the first sector on the (outermost) track is a normal 512-byte sector – which it must
+be in order to function as a boot disk – but the rest of the disk is primarily 256-byte sectors, along
+with bad sectors and unusual sector IDs.  Since this isn’t a DOS-compatible diskette, it can (and does)
+break all the rules.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, this dump wasn’t created with the KryoFlux software.  Instead, starting with a TransCopy dump,
+along with some advice on using the image conversion tools that come with &lt;a href=&quot;http://www.hampa.ch/pce/&quot;&gt;PCE&lt;/a&gt;,
+I was able to convert the TransCopy &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tc&lt;/code&gt; file into a set of KryoFlux &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.raw&lt;/code&gt; track files and successfully
+load them into &lt;a href=&quot;http://hxc2001.free.fr/&quot;&gt;HxC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The basic steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run PCE’s &lt;strong&gt;PRI&lt;/strong&gt; utility to convert the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tc&lt;/code&gt; file to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pri&lt;/code&gt; (PCE Raw Image) file&lt;/li&gt;
+  &lt;li&gt;Run PCE’s &lt;strong&gt;PFI&lt;/strong&gt; utility to convert the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pri&lt;/code&gt; file to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pfi&lt;/code&gt; (PCE Flux Image) file&lt;/li&gt;
+  &lt;li&gt;Run PCE’s &lt;strong&gt;PFI&lt;/strong&gt; utility again to convert the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pfi&lt;/code&gt; file to a set of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.raw&lt;/code&gt; track files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pri MSADVENT.tc MSADVENT.pri
+pfi -p encode pri MSADVENT.pri MSADVENT.pfi
+pfi MSADVENT.pfi track00.0.raw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the process, I also learned a bit about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.psi&lt;/code&gt; (PCE Sector Image) files, which can be created
+from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pri&lt;/code&gt; (PCE Raw Image) files; eg:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pri MSADVENT.pri -p decode mfm MSADVENT.psi -f -v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The nice thing about a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.psi&lt;/code&gt; file is that the format is fairly straightforward, and with the help of
+a little &lt;a href=&quot;https://github.com/jeffpar/pce/blob/master/doc/psi-format.txt&quot;&gt;documentation&lt;/a&gt;, I was able to
+update my &lt;a href=&quot;https://github.com/jeffpar/pcjs/tree/gh-pages/tools/&quot;&gt;DiskImage&lt;/a&gt; utility to read &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.psi&lt;/code&gt; files directly
+and create JSON-encoded PCjs disk images that replicate the structure of the original diskettes.&lt;/p&gt;
+
+&lt;p&gt;There are now &lt;em&gt;two&lt;/em&gt; Microsoft Adventure disk images in the PCjs Disk Library:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Microsoft Adventure”, which contains patched code on a standard diskette&lt;/li&gt;
+  &lt;li&gt;“Microsoft Adventure (Unmodified)”, which contains the original copy-protected code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first diskette is what I originally had to use before PCjs supported copy-protected disks.  In theory, I
+could have simply replaced the first diskette with the copy-protected version, but that would have broken
+the saved machine state of anyone who had already started playing the game with the first diskette.  Besides,
+there may be some historical or diagnostic value in keeping both versions.&lt;/p&gt;
+
+&lt;p&gt;OK, enough with the boring blog post.  Time to play!&lt;/p&gt;
+
+&lt;div class=&quot;machine pcx86 &quot; id=&quot;ibm5150-adventure&quot;&gt;
+  &lt;div id=&quot;ibm5150-adventure.machine&quot; class=&quot;pcjs-machine pcx86-machine pcx86-component&quot;&gt;
+    &lt;h3&gt;IBM PC, 64Kb RAM, Dual Floppy Drives, MDA&lt;/h3&gt;
+    &lt;div class=&quot;pcjs-chassis&quot;&gt;
+      &lt;div id=&quot;ibm5150-adventure.pcMDA&quot; class=&quot;pcjs-computer pcx86-computer pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-computer-object&quot; data-value=&quot;{ id:'ibm5150-adventure.pcMDA',name:'',autoPower:true,busWidth:0 }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.romBASIC&quot; class=&quot;pcjs-rom pcx86-rom pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-rom-object&quot; data-value=&quot;{ id:'ibm5150-adventure.romBASIC',name:'',addr:0xf6000,size:0x08000,file:'/machines/pcx86/ibm/5150/rom/basic/BASIC100.json5',alias:null,notify:'' }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.romBIOS&quot; class=&quot;pcjs-rom pcx86-rom pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-rom-object&quot; data-value=&quot;{ id:'ibm5150-adventure.romBIOS',name:'',addr:0xfe000,size:0x02000,file:'/machines/pcx86/ibm/5150/rom/bios/1981-04-24/PCBIOS-REV1.json5',alias:null,notify:'' }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.videoMDA&quot; class=&quot;pcjs-video pcx86-video pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcjs-title&quot;&gt;Monochrome Display&lt;/div&gt;
+        &lt;div class=&quot;pcjs-group&quot; style=&quot;float:right;&quot;&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.caps-lock&quot; style=&quot;padding-left:8px;&quot;&gt;
+            &lt;div class=&quot;pcjs-control-title&quot; style=&quot;text-align:right;&quot;&gt;Caps&lt;/div&gt;
+            &lt;div class=&quot;pcx86-binding pcjs-led&quot; data-value=&quot;{type:'led',binding:'caps-lock',value:''}&quot;&gt;&lt;/div&gt;
+            &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.num-lock&quot; style=&quot;padding-left:8px;&quot;&gt;
+            &lt;div class=&quot;pcjs-control-title&quot; style=&quot;text-align:right;&quot;&gt;Num&lt;/div&gt;
+            &lt;div class=&quot;pcx86-binding pcjs-led&quot; data-value=&quot;{type:'led',binding:'num-lock',value:''}&quot;&gt;&lt;/div&gt;
+            &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.scroll-lock&quot; style=&quot;padding-left:8px;&quot;&gt;
+            &lt;div class=&quot;pcjs-control-title&quot; style=&quot;text-align:right;&quot;&gt;Scroll&lt;/div&gt;
+            &lt;div class=&quot;pcx86-binding pcjs-led&quot; data-value=&quot;{type:'led',binding:'scroll-lock',value:''}&quot;&gt;&lt;/div&gt;
+            &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.fullScreen&quot; style=&quot;padding-left:8px;line-height:1em;&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'fullScreen',value:''}&quot;&gt;Full Screen&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pcx86-video-object pcjs-screen&quot; data-value=&quot;{ id:'ibm5150-adventure.videoMDA',name:'',model:'',memory:'',screenWidth:1440,screenHeight:900,screenColor:'black',fontROM:'/machines/pcx86/ibm/video/mda/IBM-MDA.json5',fontColor:'',charCols:80,charRows:25,touchScreen:'',scale:false,switches:'',autoLock:false,aspectRatio:0,smoothing:null,flicker:1.0 }&quot;&gt;
+          &lt;canvas class=&quot;pcjs-canvas&quot; width=&quot;1440&quot; height=&quot;900&quot; style=&quot;height:auto;background-color:black;opacity:1;&quot;&gt;&lt;/canvas&gt;
+          &lt;textarea class=&quot;pcjs-overlay&quot; style=&quot;line-height: normal;&quot;&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.fdcNEC&quot; class=&quot;pcjs-fdc pcx86-fdc pcx86-component&quot; style=&quot;float:left;padding-right:8px;padding-bottom:8px;&quot;&gt;
+        &lt;div class=&quot;pcjs-group&quot;&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.listDrives&quot;&gt;
+            &lt;select class=&quot;pcx86-binding&quot; data-value=&quot;{type:'list',binding:'listDrives'}&quot;&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.listDisks&quot;&gt;
+            &lt;select class=&quot;pcx86-binding&quot; data-value=&quot;{type:'list',binding:'listDisks'}&quot;&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.loadDisk&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'loadDisk',value:''}&quot;&gt;Load&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.saveDisk&quot; style=&quot;padding-right:8px;&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'saveDisk',value:''}&quot;&gt;Save&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.descDisk&quot; style=&quot;padding-right:8px;&quot;&gt;
+            &lt;div class=&quot;pcx86-binding pcjs-description&quot; data-value=&quot;{type:'description',binding:'descDisk'}&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.mountDisk&quot;&gt;
+            &lt;form class=&quot;pcx86-binding&quot; data-value=&quot;{type:'file',binding:'mountDisk'}&quot;&gt;
+              &lt;fieldset class=&quot;pcjs-fieldset&quot;&gt;
+                &lt;input type=&quot;file&quot; /&gt;&lt;input type=&quot;submit&quot; value=&quot;Mount&quot; disabled=&quot;&quot; /&gt;
+              &lt;/fieldset&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pcx86-fdc-object&quot; data-value=&quot;{ id:'ibm5150-adventure.fdcNEC',name:'',autoMount:'{ A:{name:&amp;quot;PC DOS 1.00&amp;quot;} }',diskettes:'/machines/pcx86/diskettes.json,/machines/pcx86/private.json,/machines/pcx86/pcsig08a.json,/machines/pcx86/pcsig08b.json',server:'/diskettes' }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.ramLow&quot; class=&quot;pcjs-ram pcx86-ram pcx86-component&quot;&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.listSizes&quot; style=&quot;clear:both;&quot;&gt;
+            &lt;select class=&quot;pcx86-binding&quot; data-value=&quot;{type:'list',binding:'listSizes'}&quot;&gt;
+              &lt;option value=&quot;0&quot;&gt;Default&lt;/option&gt;
+              &lt;option value=&quot;16384&quot;&gt;16K&lt;/option&gt;
+              &lt;option value=&quot;32768&quot;&gt;32K&lt;/option&gt;
+              &lt;option value=&quot;49152&quot;&gt;48K&lt;/option&gt;
+              &lt;option value=&quot;65536&quot;&gt;64K&lt;/option&gt;
+              &lt;option value=&quot;98304&quot;&gt;96K&lt;/option&gt;
+              &lt;option value=&quot;131072&quot;&gt;128K&lt;/option&gt;
+              &lt;option value=&quot;163840&quot;&gt;160K&lt;/option&gt;
+              &lt;option value=&quot;196608&quot;&gt;192K&lt;/option&gt;
+              &lt;option value=&quot;229376&quot;&gt;224K&lt;/option&gt;
+              &lt;option value=&quot;262144&quot;&gt;256K&lt;/option&gt;
+              &lt;option value=&quot;294912&quot;&gt;288K&lt;/option&gt;
+              &lt;option value=&quot;327680&quot;&gt;320K&lt;/option&gt;
+              &lt;option value=&quot;360448&quot;&gt;352K&lt;/option&gt;
+              &lt;option value=&quot;393216&quot;&gt;384K&lt;/option&gt;
+              &lt;option value=&quot;425984&quot;&gt;416K&lt;/option&gt;
+              &lt;option value=&quot;458752&quot;&gt;448K&lt;/option&gt;
+              &lt;option value=&quot;491520&quot;&gt;480K&lt;/option&gt;
+              &lt;option value=&quot;524288&quot;&gt;512K&lt;/option&gt;
+              &lt;option value=&quot;557056&quot;&gt;544K&lt;/option&gt;
+              &lt;option value=&quot;589824&quot;&gt;576K&lt;/option&gt;
+              &lt;option value=&quot;622592&quot;&gt;608K&lt;/option&gt;
+              &lt;option value=&quot;655360&quot;&gt;640K&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;div class=&quot;pcx86-ram-object&quot; data-value=&quot;{ id:'ibm5150-adventure.ramLow',name:'',addr:0,size:0,file:'',load:null,exec:null,test:true }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.cpu8088&quot; class=&quot;pcjs-cpu pcx86-cpu pcx86-component&quot;&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.reset&quot; style=&quot;padding-right:8px;&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'reset',value:''}&quot;&gt;Reset&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;div class=&quot;pcx86-cpu-object&quot; data-value=&quot;{ id:'ibm5150-adventure.cpu8088',name:'',model:'8088',stepping:'',fpu:0,multiplier:1,autoStart:undefined,addrReset:0 }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.keyboard&quot; class=&quot;pcjs-keyboard pcx86-keyboard pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcjs-group&quot; style=&quot;float:none;&quot;&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.ctrl-alt-del&quot; style=&quot;padding-right:8px;&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'ctrl-alt-del',value:''}&quot;&gt;Ctrl-Alt-Del&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control&quot; id=&quot;ibm5150-adventure.keys&quot; style=&quot;padding-right:8px;&quot;&gt;
+            &lt;button class=&quot;pcx86-binding pcjs-button&quot; data-value=&quot;{type:'button',binding:'keys',value:''}&quot;&gt;Keys&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control pcjs-soft-keyboard&quot; id=&quot;ibm5150-adventure.soft-keyboard&quot;&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f1'}&quot;&gt;F1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:4.88%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f2'}&quot;&gt;F2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f3'}&quot;&gt;F3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:4.88%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f4'}&quot;&gt;F4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f5'}&quot;&gt;F5&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:4.88%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f6'}&quot;&gt;F6&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f7'}&quot;&gt;F7&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:4.88%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f8'}&quot;&gt;F8&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:168px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f9'}&quot;&gt;F9&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:4.88%;top:168px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f10'}&quot;&gt;F10&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:11.16%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'esc'}&quot;&gt;Esc&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:16.05%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'1'}&quot;&gt;1 !&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:20.93%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'2'}&quot;&gt;2 @&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:25.81%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'3'}&quot;&gt;3 #&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.70%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'4'}&quot;&gt;4 $&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:35.58%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'5'}&quot;&gt;5 %&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:40.47%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'6'}&quot;&gt;6 ^&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:45.35%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'7'}&quot;&gt;7 &amp;amp;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:50.23%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'8'}&quot;&gt;8 *&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.12%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'9'}&quot;&gt;9 (&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:60.00%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'0'}&quot;&gt;0 )&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:64.88%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'-'}&quot;&gt;- _&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:69.77%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'='}&quot;&gt;= +&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.65%;top:0;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'bs'}&quot;&gt;Back&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:95.58%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-sub'}&quot;&gt;-&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:80.93%;top:0;width:8.84%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-lock'}&quot;&gt;Num&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:90.70%;top:0;width:8.84%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'scroll-lock'}&quot;&gt;Scroll&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:11.16%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'tab'}&quot;&gt;Tab&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:16.05%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'q'}&quot;&gt;Q&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:20.93%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'w'}&quot;&gt;W&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:25.81%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'e'}&quot;&gt;E&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.70%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'r'}&quot;&gt;R&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:35.58%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'t'}&quot;&gt;T&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:40.47%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'y'}&quot;&gt;Y&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:45.35%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'u'}&quot;&gt;U&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:50.23%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'i'}&quot;&gt;I&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.12%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'o'}&quot;&gt;O&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:60.00%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'p'}&quot;&gt;P&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:64.88%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'['}&quot;&gt;[ {&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:69.77%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:']'}&quot;&gt;] }&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.65%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; style=&quot;height:76px;&quot; data-value=&quot;{type:'key',binding:'enter'}&quot;&gt;&amp;#8629;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:80.93%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-home'}&quot;&gt;7&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:85.81%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-up'}&quot;&gt;&amp;#8593; 8&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:90.70%;top:42px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-pgup'}&quot;&gt;9&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:11.16%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'ctrl'}&quot;&gt;Ctrl&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:16.05%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'a'}&quot;&gt;A&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:20.93%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'s'}&quot;&gt;S&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:25.81%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'d'}&quot;&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.70%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f'}&quot;&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:35.58%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'g'}&quot;&gt;G&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:40.47%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'h'}&quot;&gt;H&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:45.35%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'j'}&quot;&gt;J&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:50.23%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'k'}&quot;&gt;K&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.12%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'l'}&quot;&gt;L&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:60.00%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:';'}&quot;&gt;; :&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:64.88%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'quote'}&quot;&gt;' &amp;quot;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:69.77%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'`'}&quot;&gt;` ~&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:80.93%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-left'}&quot;&gt;&amp;#8592; 4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:85.81%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-center'}&quot;&gt;5&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:90.70%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-right'}&quot;&gt;&amp;#8594; 6&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:95.58%;top:84px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; style=&quot;height:118px;&quot; data-value=&quot;{type:'key',binding:'num-add'}&quot;&gt;+&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:11.16%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'shift'}&quot;&gt;Shift&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:16.05%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'\\'}&quot;&gt;\ |&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:20.93%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'z'}&quot;&gt;Z&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:25.81%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'x'}&quot;&gt;X&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.70%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'c'}&quot;&gt;C&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:35.58%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'v'}&quot;&gt;V&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:40.47%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'b'}&quot;&gt;B&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:45.35%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'n'}&quot;&gt;N&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:50.23%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'m'}&quot;&gt;M&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.12%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:','}&quot;&gt;, &amp;lt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:60.00%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'.'}&quot;&gt;. &amp;gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:64.88%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'/'}&quot;&gt;/ ?&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:69.77%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'right-shift'}&quot;&gt;Shift&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.65%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'prtsc'}&quot;&gt;PrtSc&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:80.93%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-end'}&quot;&gt;1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:85.81%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-down'}&quot;&gt;&amp;#8595; 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:90.70%;top:126px;width:3.95%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-pgdn'}&quot;&gt;3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:11.16%;top:168px;width:6.28%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'alt'}&quot;&gt;Alt&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.37%;top:168px;width:53.02%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'space'}&quot;&gt;Space&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:72.33%;top:168px;width:6.28%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'caps-lock'}&quot;&gt;Caps&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:80.93%;top:168px;width:6.28%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-ins'}&quot;&gt;Ins 0&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:88.37%;top:168px;width:6.28%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-del'}&quot;&gt;Del .&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pcjs-control pcx86-control pcjs-soft-keyboard-mobile&quot; id=&quot;ibm5150-adventure.soft-keyboard-mobile&quot;&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'esc'}&quot;&gt;Esc&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'tab'}&quot;&gt;Tab&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f1'}&quot;&gt;F1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.53%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f2'}&quot;&gt;F2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:24.71%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f3'}&quot;&gt;F3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.88%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f4'}&quot;&gt;F4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:37.06%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f5'}&quot;&gt;F5&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:43.24%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f6'}&quot;&gt;F6&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:49.41%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f7'}&quot;&gt;F7&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.59%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f8'}&quot;&gt;F8&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:61.76%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f9'}&quot;&gt;F9&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:67.94%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f10'}&quot;&gt;F10&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.12%;top:0;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'undefined'}&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:0;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-lock'}&quot;&gt;Num&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:91.47%;top:0;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'scroll-lock'}&quot;&gt;Scroll&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'1'}&quot;&gt;1 !&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'2'}&quot;&gt;2 @&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'3'}&quot;&gt;3 #&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.53%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'4'}&quot;&gt;4 $&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:24.71%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'5'}&quot;&gt;5 %&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.88%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'6'}&quot;&gt;6 ^&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:37.06%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'7'}&quot;&gt;7 &amp;amp;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:43.24%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'8'}&quot;&gt;8 *&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:49.41%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'9'}&quot;&gt;9 (&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.59%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'0'}&quot;&gt;0 )&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:61.76%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'-'}&quot;&gt;- _&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:67.94%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'='}&quot;&gt;= +&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.12%;top:42px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'bs'}&quot;&gt;Back&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:42px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-sub'}&quot;&gt;-&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:91.47%;top:42px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-add'}&quot;&gt;+&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'q'}&quot;&gt;Q&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'w'}&quot;&gt;W&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'e'}&quot;&gt;E&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.53%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'r'}&quot;&gt;R&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:24.71%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'t'}&quot;&gt;T&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.88%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'y'}&quot;&gt;Y&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:37.06%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'u'}&quot;&gt;U&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:43.24%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'i'}&quot;&gt;I&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:49.41%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'o'}&quot;&gt;O&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.59%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'p'}&quot;&gt;P&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:61.76%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'['}&quot;&gt;[ {&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:67.94%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:']'}&quot;&gt;] }&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.12%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; style=&quot;height:76px;&quot; data-value=&quot;{type:'key',binding:'enter'}&quot;&gt;&amp;#8629;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-home'}&quot;&gt;7&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:88.24%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-up'}&quot;&gt;&amp;#8593; 8&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:94.41%;top:84px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-pgup'}&quot;&gt;9&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'a'}&quot;&gt;A&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'s'}&quot;&gt;S&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'d'}&quot;&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.53%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'f'}&quot;&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:24.71%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'g'}&quot;&gt;G&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.88%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'h'}&quot;&gt;H&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:37.06%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'j'}&quot;&gt;J&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:43.24%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'k'}&quot;&gt;K&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:49.41%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'l'}&quot;&gt;L&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.59%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:';'}&quot;&gt;; :&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:61.76%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'quote'}&quot;&gt;' &amp;quot;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:67.94%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'`'}&quot;&gt;` ~&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-left'}&quot;&gt;&amp;#8592; 4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:88.24%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-center'}&quot;&gt;5&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:94.41%;top:126px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-right'}&quot;&gt;&amp;#8594; 6&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'\\'}&quot;&gt;\ |&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'z'}&quot;&gt;Z&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'x'}&quot;&gt;X&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:18.53%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'c'}&quot;&gt;C&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:24.71%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'v'}&quot;&gt;V&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:30.88%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'b'}&quot;&gt;B&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:37.06%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'n'}&quot;&gt;N&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:43.24%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'m'}&quot;&gt;M&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:49.41%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:','}&quot;&gt;, &amp;lt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:55.59%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'.'}&quot;&gt;. &amp;gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:61.76%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'/'}&quot;&gt;/ ?&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:67.94%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'right-shift'}&quot;&gt;Shift&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:74.12%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'prtsc'}&quot;&gt;PrtSc&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-end'}&quot;&gt;1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:88.24%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-down'}&quot;&gt;&amp;#8595; 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:94.41%;top:168px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-pgdn'}&quot;&gt;3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:0;top:210px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'ctrl'}&quot;&gt;Ctrl&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:6.18%;top:210px;width:5.00%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'shift'}&quot;&gt;Shift&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:12.35%;top:210px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'alt'}&quot;&gt;Alt&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:21.47%;top:210px;width:48.53%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'space'}&quot;&gt;Space&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:71.18%;top:210px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'caps-lock'}&quot;&gt;Caps&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:82.06%;top:210px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-ins'}&quot;&gt;Ins 0&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pcx86-control&quot; style=&quot;position:relative;left:91.47%;top:210px;width:7.94%;&quot;&gt;
+              &lt;div class=&quot;pcx86-binding pcjs-soft-key&quot; data-value=&quot;{type:'key',binding:'num-del'}&quot;&gt;Del .&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pcx86-keyboard-object&quot; data-value=&quot;{ id:'ibm5150-adventure.keyboard',name:'',model:'us83' }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.chipset&quot; class=&quot;pcjs-chipset pcx86-chipset pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-chipset-object&quot; data-value=&quot;{ id:'ibm5150-adventure.chipset',name:'',model:'5150',scaleTimers:false,sw1:'01000001',sw2:'11111000',sound:true,floppies:{  },monitor:'',dateRTC:'' }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.lpt1&quot; class=&quot;pcjs-parallel pcx86-parallel pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-parallel-object&quot; data-value=&quot;{ id:'ibm5150-adventure.lpt1',name:'',adapter:2,binding:''}&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;ibm5150-adventure.com1&quot; class=&quot;pcjs-serial pcx86-serial pcx86-component&quot;&gt;
+        &lt;div class=&quot;pcx86-serial-object&quot; data-value=&quot;{ id:'ibm5150-adventure.com1',name:'',adapter:1,binding:'',baudReceive:0,baudTransmit:0,tabSize:0,charBOL:0,upperCase:false }&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;pcjs-copyright&quot;&gt;
+      &lt;a href=&quot;https://www.pcjs.org/&quot; target=&quot;_blank&quot;&gt;PCx86&lt;/a&gt; v2.07 © 2012-2022 &lt;a href=&quot;https://github.com/jeffpar&quot; target=&quot;_blank&quot;&gt;Jeff Parsons&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 13 Jun 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/06/13/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/06/13/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>WordStar for the IBM PC circa 1982</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/software/pcx86/app/other/wordstar/3.20/&quot;&gt;MicroPro WordStar 3.20 for the IBM PC&lt;/a&gt;
+has been updated to include original MicroPro diskettes for version 3.20, along with other materials.&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-materials&quot;&gt;Additional Materials&lt;/h3&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-2-binder-png&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/u/s!ArcO_mFRe1Z9gqlTMVtF-s8OxtSNpA&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.2_Binder.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar Binder&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar Binder&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-0-training-guide-pdf&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gqlYINZ_GQ3Y6NVSUA?e=cUZyft&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.0_Training_Guide.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar 3.0 Training Guide&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar 3.0 Training Guide&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-2-general-information-pdf&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gqkVkrQ_SzATTmls_Q?e=D3kVDU&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.2_General_Information.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar 3.2 General Information&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar 3.2 General Information&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-2-reference-manual-pdf&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gqkWhsTCHW7gkQ2W7A?e=VLlYyf&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.2_Reference_Manual.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar 3.2 Reference Manual&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar 3.2 Reference Manual&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-2-technical-information-pdf&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gqkUQdVG_FL8aYm3fg?e=yffrXl&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.2_Technical_Information.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar 3.2 Technical Information&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar 3.2 Technical Information&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;pcjs-gallery-frame&quot; id=&quot;wordstar-3-0-reference-card-png&quot; style=&quot;width:320px&quot;&gt;
+    &lt;div class=&quot;pcjs-gallery-image&quot;&gt;
+      &lt;a href=&quot;https://1drv.ms/b/s!ArcO_mFRe1Z9gqkTDr8PVob3Mpvnxg?e=XPFAEC&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/software/pcx86/app/other/wordstar/3.20/covers/WordStar_3.0_Reference_Card.png&quot; width=&quot;320&quot; height=&quot;460&quot; alt=&quot;WordStar 3.0 Reference Card&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;pcjs-gallery-label&quot;&gt;WordStar 3.0 Reference Card&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 02 Jun 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/06/02/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/06/02/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>More Old CD-ROMs and Gotchas</title>
+        <description>&lt;p&gt;Before acquiring a copy of the 1988 &lt;a href=&quot;/blog/2019/05/31/&quot;&gt;Microsoft Programmer’s Library 1.0 CD-ROM&lt;/a&gt;,
+the oldest Microsoft CD-ROM I owned was the 1991 edition of Bookshelf for Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cds005.pcjs.org/microsoft/reference/Bookshelf-Windows-1991/BSWIN91-Case.png&quot; alt=&quot;Bookshelf for Windows 1991 - Case&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I recently decided to add &lt;a href=&quot;/blog/2019/05/31/#introducing-pcjs-cd-rom-support&quot;&gt;CD-ROM support&lt;/a&gt; to PCjs,
+starting with the venerable IBM PC AT.  Early IBM PC-compatible CD-ROM drives would come with their own ISA
+controller boards, but I had no desire to emulate the hardware of old third-party controllers that probably
+also had very little existing documentation.  The advantage of starting with the IBM PC AT is that
+its hard disk controller was the basis for future ATA and ATAPI controllers, so adapting the AT’s controller
+to support ATAPI commands was the simplest way to &lt;a href=&quot;/machines/pcx86/ibm/5170/vga/cdrom/&quot;&gt;connect a simulated CD-ROM drive to a PCjs machine&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;bookshelf-for-windows-1991&quot;&gt;Bookshelf for Windows (1991)&lt;/h3&gt;
+
+&lt;p&gt;Once I had CD-ROM support limping along, I decided to try &lt;strong&gt;Bookshelf for Windows&lt;/strong&gt; on Windows 3.1.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cds005.pcjs.org/microsoft/reference/Bookshelf-Windows-1991/BSWIN91.png&quot; alt=&quot;Bookshelf for Windows 1991&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And initially, things looked very promising:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/BSWIN31-Install1of4.png&quot; alt=&quot;Bookshelf for Windows 1991 - Install 1 of 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/BSWIN31-Install2of4.png&quot; alt=&quot;Bookshelf for Windows 1991 - Install 2 of 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/BSWIN31-Install4of4.png&quot; alt=&quot;Bookshelf for Windows 1991 - Install 4 of 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My first reaction to the “Fatal Error”: what just went wrong with my new CD-ROM emulation?&lt;/p&gt;
+
+&lt;p&gt;Even though this was a 27-year-old error message, I decided to &lt;a href=&quot;https://www.google.com/search?q=CloseFontProgress+%22error+writing+to+the+system+setup+file%22&quot;&gt;Google It&lt;/a&gt;,
+and I got back exactly ONE hit… on my OWN website:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jeffpar.github.io/kbarchive/kb/101/Q101464/&quot;&gt;&lt;img src=&quot;/blog/images/Google-Q101464.png&quot; alt=&quot;CloseFontProgress &amp;quot;error writing to the system setup file&amp;quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The good news: this was a known problem (and fortunately not &lt;em&gt;my&lt;/em&gt; problem).&lt;/p&gt;
+
+&lt;p&gt;The bad news: as I &lt;a href=&quot;/blog/2017/10/13/&quot;&gt;lamented&lt;/a&gt; a couple years ago, Microsoft is &lt;em&gt;still&lt;/em&gt; a crappy archivist.
+I suppose I should be happy that early KnowledgeBase articles are now the tiniest bit easier to find, thanks to
+an archive that I helped create, but I would still rather see Microsoft take some responsibility for this.&lt;/p&gt;
+
+&lt;p&gt;So, back to the story.  The KB article provided three work-arounds, so I opted #2, which involved opening SETUP.INF
+in WRITE.EXE, searching for large comment blocks, and deleting them.  After that, Bookshelf for Windows setup
+was successful.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/BSWIN31-InstallDone.png&quot; alt=&quot;Bookshelf for Windows 1991 - Install Done&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can give it a try yourself in this &lt;a href=&quot;/machines/pcx86/ibm/5170/vga/cdrom/&quot;&gt;IBM PC AT with ATAPI CD-ROM Support&lt;/a&gt;.
+I did not preinstall &lt;strong&gt;Bookshelf for Windows&lt;/strong&gt; in that machine, because I wouldn’t want to deprive you
+of the authentic experience of installing buggy software from 1992 and choosing whichever “Fatal Error”
+work-around works best for you.&lt;/p&gt;
+
+&lt;h3 id=&quot;pandoras-box-1999&quot;&gt;Pandora’s Box (1999)&lt;/h3&gt;
+
+&lt;p&gt;In other recent, coincidental, and entirely unrelated news, a friend was trying to create a preservation
+copy of a 20-year-old Microsoft CD-ROM entertainment title called &lt;strong&gt;Pandora’s Box&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cds001.pcjs.org/microsoft/games/Pandoras-Box/Pandoras-Box.png&quot; alt=&quot;Pandora's Box&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There were no problems cloning the CD-ROM, and the software would install fine from the clone, but when it was run,
+it would either crash or display “Please insert the correct CD-ROM….”, depending on the machine and operating system
+being used.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cds001.pcjs.org/microsoft/games/Pandoras-Box/WindowsXP-PandorasBox-ISO-Unpatched.png&quot; alt=&quot;Pandora's Box - Unpatched&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This led one to believe there was something wrong with the copy – and there was, because it turns out
+that &lt;strong&gt;Pandora’s Box&lt;/strong&gt; was one of many software titles from the late 1990s that used a third-party copy-protection
+technology called “SafeDisc”.  Suffice to say that if the game’s EXE file was accompanied by an ICD file,
+along with other files such as CLOKSPL.EXE, then it’s a safe bet the CD-ROM was protected by SafeDisc.&lt;/p&gt;
+
+&lt;p&gt;In the case of &lt;strong&gt;Pandora’s Box&lt;/strong&gt;, however, the plot thickens.  It’s possible that this copy-protection feature
+created problems for users with certain processors and/or operating systems, because in early 2000, less than
+one year after the software’s release, Microsoft issued a patch, along with the following notes on their
+website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NEW! Pandora’s Box Update&lt;/p&gt;
+
+  &lt;p&gt;Patch Set 1.0&lt;/p&gt;
+
+  &lt;p&gt;Important Note: This patch is used for English, French and Japanese versions of Pandora’s Box.&lt;/p&gt;
+
+  &lt;p&gt;These self­-extracting, self­-installing files install 2 modified files, PANDORA.EXE and LANGENU.DLL.
+This patch fixes a bug specific to computers with new Pentium III processors, which produce the error
+“Unable to create DirectDraw surface. Make sure that DirectX is installed, and then try again” upon startup.
+If you do not have a computer with a Pentium III processor and do not recieve [sic] this error upon startup,
+then there is no need to patch your existing setup.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One important side-effect of the patch: the copy-protection was removed.  Whether that’s because the
+copy-protection itself was responsible in some way for the bug, or because the copy-protection simply
+made a conventional patch too difficult to perform, is unclear.  If the latter, then the makers of
+“SafeDisc” (or Microsoft) must not have thought through the implications of encrypting and renaming the
+main executable to PANDORA.ICD and calling the SafeDisc loader PANDORA.EXE.  It appears that Microsoft’s
+“patch” simply replaced the SafeDisc loader with an updated and unencrypted PANDORA.EXE.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-art-of-software-preservation&quot;&gt;The Art of Software Preservation&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Pandora’s Box&lt;/strong&gt; illustrates more than just the obvious principle that “copy-protected software is hard to
+copy”, to which I’ve already &lt;a href=&quot;/blog/2019/05/05/#the-software-preservation-quandary&quot;&gt;alluded&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;More than that, it shows that there’s more to preservation than simply figuring out how to “copy the bits”.
+There is also a history associated with each piece of software that needs to be researched, captured, and
+preserved as well.  And that history may span a variety of obsolete media, including print media (magazine
+articles, advertisements, newsletters, etc) and online media (product pages and support articles that have
+been deleted, FTP servers that have been decommissioned, etc).&lt;/p&gt;
+
+&lt;p&gt;The worst-case scenario is software that requires a live server to authenticate users or provide some sort
+of virtual environment – a scenario that has tended to get more attention and hand-wringing lately, with the
+recent rise and fall of various Internet-enabled games.&lt;/p&gt;
+
+&lt;p&gt;In the case of &lt;strong&gt;Pandora’s Box&lt;/strong&gt;, the &lt;a href=&quot;https://cds001.pcjs.org/microsoft/games/Pandoras-Box/Pandoras-Box.pdf&quot;&gt;CD insert&lt;/a&gt;
+said to visit &lt;a href=&quot;http://www.microsoft.com/games/pandorasbox&quot;&gt;http://www.microsoft.com/games/pandorasbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s a dead end now, but at least it’s a starting point.  The problem I ran into with &lt;strong&gt;Bookshelf
+for Windows&lt;/strong&gt; is that it predated websites, and even if websites had existed at the time, it’s
+unlikely that a “Bookshelf for Windows” web page would have mentioned any relevant KB articles.
+Companies don’t like mixing Product Support with Marketing, because that might make you think their
+software is less than perfect.&lt;/p&gt;
+
+&lt;p&gt;Thanks to the Internet Archive’s “Wayback Machine”, all hope is not lost when it comes to old websites,
+and it’s still possible to access the web pages for &lt;a href=&quot;https://web.archive.org/web/2018*/http://www.microsoft.com/games/pandorasbox&quot;&gt;Pandora’s Box&lt;/a&gt;,
+including the &lt;a href=&quot;https://web.archive.org/web/20000815060252/http://www.microsoft.com/games/pandorasbox/downloads.htm&quot;&gt;Downloads&lt;/a&gt; page,
+where the previously mentioned patch is described.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the patch is located on Microsoft’s decommissioned FTP server, which the Internet Archive
+apparently didn’t snapshot.  But other people did, and some of them even &lt;a href=&quot;https://archive.org/details/ftp.microsoft.com&quot;&gt;uploaded&lt;/a&gt;
+their snapshots to the Internet Archive.  So with a bit more work, it’s possible to eventually locate and
+download the patch for &lt;strong&gt;Pandora’s Box&lt;/strong&gt;, eliminate the copy protection, and preserve another fine piece of software
+for many puzzle-loving generations to come.&lt;/p&gt;
+
+&lt;p&gt;NOTE: &lt;strong&gt;Pandora’s Box&lt;/strong&gt; does not run in any PCjs machines at this time.  The machine running &lt;a href=&quot;/software/pcx86/sys/windows/win95/4.00.950/&quot;&gt;Windows 95&lt;/a&gt;
+is the best candidate, but PCjs ATAPI CD-ROM support isn’t quite up to the job yet.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 01 Jun 2019 10:00:00 +0000</pubDate>
+        <link>https://www.pcjs.org/blog/2019/06/01/</link>
+        <guid isPermaLink="true">https://www.pcjs.org/blog/2019/06/01/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
